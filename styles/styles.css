@@ -6,13 +6,34 @@
   font-family: "Libre Franklin", sans-serif;
 }
 
-main {
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  padding-bottom: 40px;
   font-size: 20px;
+}
+
+main {
   padding: 20px;
+  max-width: 580px;
+  width: 100%;
 }
 
 main .content {
   padding: 20px;
+  margin-bottom: 50px;
 }
 
 main .content img {
@@ -84,5 +105,68 @@ main .content__form__btn {
   font-weight: 600;
   -webkit-box-shadow: 0px 8px 10px #c2d3ff;
           box-shadow: 0px 8px 10px #c2d3ff;
+}
+
+main .img-wrap {
+  width: 100%;
+}
+
+main .img-wrap img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  margin-top: auto;
+  font-size: 0.6em;
+  color: #969696;
+}
+
+footer .social-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+footer .social-wrap .icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px;
+  border: 1px solid #c2d3ff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+footer .social-wrap .icon-container svg {
+  width: 17px;
+  height: 17px;
+}
+
+footer .social-wrap .icon-container svg path {
+  fill: #4f7df3;
+}
+
+footer .social-wrap .icon-container:hover {
+  background: #4f7df3;
+  border-color: #4f7df3;
+}
+
+footer .social-wrap .icon-container:hover svg path {
+  fill: #fff;
 }
 /*# sourceMappingURL=styles.css.map */

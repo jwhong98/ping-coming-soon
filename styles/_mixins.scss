@@ -4,6 +4,12 @@
   align-items: center;
 }
 
+@mixin centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin formElement {
   width: 100%;
   padding: 15px 25px;
