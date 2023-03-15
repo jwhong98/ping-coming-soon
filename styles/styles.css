@@ -1,1 +1,88 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+main {
+  font-size: 20px;
+  padding: 20px;
+}
+
+main .content {
+  padding: 20px;
+}
+
+main .content img {
+  margin-bottom: 20px;
+}
+
+main .content__text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+}
+
+main .content__text-wrap__title {
+  font-size: 1.25em;
+  color: #969696;
+}
+
+main .content__text-wrap__title span {
+  font-weight: 700;
+  color: black;
+}
+
+main .content__text-wrap__subtitle {
+  font-size: 0.7em;
+}
+
+main .content__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+main .content__form input {
+  width: 100%;
+  padding: 15px 25px;
+  outline: none;
+  border-radius: 30px;
+  font-size: 0.7em;
+  border: 1px solid #c2d3ff;
+  color: #c2d3ff;
+}
+
+main .content__form__btn {
+  width: 100%;
+  padding: 15px 25px;
+  outline: none;
+  border-radius: 30px;
+  font-size: 0.7em;
+  border: none;
+  background: #4f7df3;
+  color: #fff;
+  font-weight: 600;
+  -webkit-box-shadow: 0px 8px 10px #c2d3ff;
+          box-shadow: 0px 8px 10px #c2d3ff;
+}
+/*# sourceMappingURL=styles.css.map */

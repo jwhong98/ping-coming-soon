@@ -1,0 +1,60 @@
+@import "./variables";
+@import "./mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+main {
+  font-size: 20px;
+  padding: 20px;
+
+  .content {
+    padding: 20px;
+    img {
+      margin-bottom: 20px;
+    }
+    &__text-wrap {
+      @include flexCol;
+      margin-bottom: 40px;
+      gap: 20px;
+      &__title {
+        font-size: 1.25em;
+        color: $gray;
+        span {
+          font-weight: 700;
+          color: black;
+        }
+      }
+
+      &__subtitle {
+        font-size: 0.7em;
+      }
+    }
+
+    &__form {
+      @include flexCol;
+      gap: 10px;
+
+      input {
+        @include formElement;
+        border: 1px solid $paleBlue;
+        color: $paleBlue;
+      }
+      &__btn {
+        @include formElement;
+        border: none;
+        background: $blue;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0px 8px 10px $paleBlue;
+      }
+    }
+  }
+
+  .img-wrap {
+  }
+}
