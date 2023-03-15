@@ -12,20 +12,32 @@ body {
   @include flexCol;
   justify-content: center;
   height: 100vh;
-  padding-bottom: 40px;
   font-size: 20px;
+  padding-top: 30px;
 }
 
 main {
   padding: 20px;
-  max-width: 580px;
+  max-width: 450px;
   width: 100%;
+
+  @media only screen and (min-width: 800px) {
+    max-width: 600px;
+  }
 
   .content {
     padding: 20px;
-    margin-bottom: 50px;
+    max-height: 360px;
+    height: 100%;
+    @media only screen and (min-width: 800px) {
+      padding: 0;
+      max-height: 310px;
+      //   height: auto;
+      //   margin-bottom: 70px;
+    }
     img {
       margin-bottom: 20px;
+      width: 70px;
     }
     &__text-wrap {
       @include flexCol;
@@ -34,6 +46,10 @@ main {
       &__title {
         font-size: 1.25em;
         color: $gray;
+
+        @media only screen and (min-width: 800px) {
+          font-size: 1.75em;
+        }
         span {
           font-weight: 700;
           color: black;
@@ -49,11 +65,49 @@ main {
       @include flexCol;
       gap: 10px;
 
-      input {
-        @include formElement;
-        border: 1px solid $paleBlue;
-        color: $paleBlue;
+      @media only screen and (min-width: 800px) {
+        flex-direction: row;
       }
+
+      &__wrap {
+        width: 100%;
+        position: relative;
+        @media only screen and (min-width: 800px) {
+          flex: 3;
+        }
+
+        input {
+          @include formElement;
+          border: 1px solid $paleBlue;
+          color: $paleBlue;
+        }
+
+        .error {
+          border-color: $lightRed;
+        }
+
+        .error-msg {
+          display: none;
+          color: $lightRed;
+          font-size: 0.6em;
+          text-align: center;
+          font-style: italic;
+          margin-top: 5px;
+          margin-bottom: 20px;
+
+          @media only screen and (min-width: 800px) {
+            margin: 0;
+            position: absolute;
+            left: 25px;
+            bottom: -20px;
+          }
+        }
+
+        .active {
+          display: block;
+        }
+      }
+
       &__btn {
         @include formElement;
         border: none;
@@ -61,6 +115,15 @@ main {
         color: #fff;
         font-weight: 600;
         box-shadow: 0px 8px 10px $paleBlue;
+        cursor: pointer;
+
+        @media only screen and (min-width: 800px) {
+          flex: 1;
+        }
+      }
+
+      &__btn:hover {
+        opacity: 0.7;
       }
     }
   }
@@ -110,5 +173,8 @@ footer {
         fill: #fff;
       }
     }
+  }
+  .copyright {
+    margin-bottom: 40px;
   }
 }

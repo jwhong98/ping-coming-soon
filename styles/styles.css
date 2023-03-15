@@ -21,23 +21,38 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
-  padding-bottom: 40px;
   font-size: 20px;
+  padding-top: 30px;
 }
 
 main {
   padding: 20px;
-  max-width: 580px;
+  max-width: 450px;
   width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    max-width: 600px;
+  }
 }
 
 main .content {
   padding: 20px;
-  margin-bottom: 50px;
+  max-height: 360px;
+  height: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  main .content {
+    padding: 0;
+    max-height: 310px;
+  }
 }
 
 main .content img {
   margin-bottom: 20px;
+  width: 70px;
 }
 
 main .content__text-wrap {
@@ -58,6 +73,12 @@ main .content__text-wrap {
 main .content__text-wrap__title {
   font-size: 1.25em;
   color: #969696;
+}
+
+@media only screen and (min-width: 800px) {
+  main .content__text-wrap__title {
+    font-size: 1.75em;
+  }
 }
 
 main .content__text-wrap__title span {
@@ -83,9 +104,31 @@ main .content__form {
   gap: 10px;
 }
 
-main .content__form input {
+@media only screen and (min-width: 800px) {
+  main .content__form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+main .content__form__wrap {
   width: 100%;
-  padding: 15px 25px;
+  position: relative;
+}
+
+@media only screen and (min-width: 800px) {
+  main .content__form__wrap {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
+}
+
+main .content__form__wrap input {
+  width: 100%;
+  padding: 13px 25px;
   outline: none;
   border-radius: 30px;
   font-size: 0.7em;
@@ -93,9 +136,36 @@ main .content__form input {
   color: #c2d3ff;
 }
 
+main .content__form__wrap .error {
+  border-color: #ff5263;
+}
+
+main .content__form__wrap .error-msg {
+  display: none;
+  color: #ff5263;
+  font-size: 0.6em;
+  text-align: center;
+  font-style: italic;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 800px) {
+  main .content__form__wrap .error-msg {
+    margin: 0;
+    position: absolute;
+    left: 25px;
+    bottom: -20px;
+  }
+}
+
+main .content__form__wrap .active {
+  display: block;
+}
+
 main .content__form__btn {
   width: 100%;
-  padding: 15px 25px;
+  padding: 13px 25px;
   outline: none;
   border-radius: 30px;
   font-size: 0.7em;
@@ -105,6 +175,19 @@ main .content__form__btn {
   font-weight: 600;
   -webkit-box-shadow: 0px 8px 10px #c2d3ff;
           box-shadow: 0px 8px 10px #c2d3ff;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 800px) {
+  main .content__form__btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+main .content__form__btn:hover {
+  opacity: 0.7;
 }
 
 main .img-wrap {
@@ -168,5 +251,9 @@ footer .social-wrap .icon-container:hover {
 
 footer .social-wrap .icon-container:hover svg path {
   fill: #fff;
+}
+
+footer .copyright {
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=styles.css.map */
